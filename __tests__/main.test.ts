@@ -45,8 +45,7 @@ test('loads specific version', () => {
   expect.stringContaining(VERSION).asymmetricMatch(stdout)
 })
 
-// TODO: unskip this until there is a latest version
-test.skip('runs with default', () => {
+test('runs with default', () => {
   const config = path.join(__dirname, '..', 'action.yml')
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const action: any = yaml.load(fs.readFileSync(config, 'utf8'))
